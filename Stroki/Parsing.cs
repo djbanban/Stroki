@@ -1,31 +1,42 @@
-﻿using System.Threading.Channels;
+﻿using System.Text;
+using System.Threading.Channels;
 
 namespace Stroki
 {
     public class Parsing
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="s"></param>
-        /// <param name="type"></param>
-        /// <returns></returns>
+        const int ap = 46; // ascii point
+        const int ans = 48; // ascii number start
+        const int ane = 57; // ascii number end
         public static string CheckType(string s, string type)
         {
-            s = s.Trim();
             if (String.IsNullOrEmpty(s))
-                return "пустой файл".ToString();
-            bool isNumeric = int.TryParse(s, out _);
-            bool isDouble = double.TryParse(s, out _);
-            bool isBool = bool.TryParse(s, out _);
-            if (isNumeric)
-                type = "int";
-            else if (isDouble && !s.Contains(' '))
-                type = "double";
-            else if (isBool)
+                return "File is Empty".ToString();
+            s = s.Trim();
+            int count = 0;
+            byte[] asciiBytes = Encoding.ASCII.GetBytes(s);
+            int lenght = asciiBytes.Length;
+            if (s.ToLower() == "false" || s.ToLower() == "true")
                 type = "bool";
+            else if (s == "0")
+                type = "int";
             else
-                type = "string";
+            {
+                for (int i = 0; i < lenght; i++)
+                    if (asciiBytes[i] >= ans && asciiBytes[i] <= ane)
+                        count++;
+                if (count == asciiBytes.Length && asciiBytes[0] != ans)
+                    type = "int";
+                else if (count == lenght - 1 && asciiBytes[0] != ap && asciiBytes[lenght - 1] != ap && !s.Contains(' '))
+                {
+                    if (s.Contains('.') || s.Contains(','))
+                        type = "double";
+                    else
+                        type = "string";
+                }
+                else
+                    type = "string";
+            }
             return type.ToString();
         }
         /// <summary>

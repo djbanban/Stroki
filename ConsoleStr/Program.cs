@@ -12,10 +12,8 @@ namespace ParseStroki
         {
             string type = "";
             Console.ForegroundColor = ConsoleColor.Green;
-            string path = @"D:\progi\billig\stroki\test.txt";
-            string s = " 2.2 ";
-           
-            Console.WriteLine(CheckType(s,type));
+            string s = "2/2";
+            Console.WriteLine(CheckType(s, type));
 
         }
     }
