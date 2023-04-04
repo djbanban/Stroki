@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ConsoleStr/1.0.0": {
+        "dependencies": {
+          "Stroki": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleStr.dll": {}
+        }
+      },
+      "Stroki/1.0.0": {
+        "runtime": {
+          "Stroki.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleStr/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Stroki/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
