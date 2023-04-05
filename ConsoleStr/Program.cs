@@ -11,8 +11,8 @@ namespace ParseStroki
         static void Main()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            string s = "2/2";
-            Console.WriteLine(CheckType(s));
+            string s = "222.5";
+            Converter(s, "double");
 
         }
     }
