@@ -10,10 +10,9 @@ namespace ParseStroki
     {
         static void Main()
         {
-            string type = "";
             Console.ForegroundColor = ConsoleColor.Green;
             string s = "2/2";
-            Console.WriteLine(CheckType(s, type));
+            Console.WriteLine(CheckType(s));
 
         }
     }

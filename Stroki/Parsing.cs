@@ -8,8 +8,9 @@ namespace Stroki
         const int ap = 46; // ascii point
         const int ans = 48; // ascii number start
         const int ane = 57; // ascii number end
-        public static string CheckType(string s, string type)
+        public static string CheckType(string s)
         {
+            string type = "";
             if (String.IsNullOrEmpty(s))
                 return "File is Empty".ToString();
             s = s.Trim();

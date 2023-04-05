@@ -10,3 +10,15 @@ F:\visual studio\Stroki\Stroki\obj\Debug\net6.0\Stroki.dll
 F:\visual studio\Stroki\Stroki\obj\Debug\net6.0\refint\Stroki.dll
 F:\visual studio\Stroki\Stroki\obj\Debug\net6.0\Stroki.pdb
 F:\visual studio\Stroki\Stroki\obj\Debug\net6.0\ref\Stroki.dll
+C:\Users\Krav1tar\source\repos\Stroki\Stroki\bin\Debug\net6.0\Stroki.deps.json
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\bin\Debug\net6.0\Stroki.dll
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\bin\Debug\net6.0\Stroki.pdb
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.csproj.AssemblyReference.cache
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.AssemblyInfoInputs.cache
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.AssemblyInfo.cs
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.csproj.CoreCompileInputs.cache
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.dll
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\refint\Stroki.dll
+C:\Users\Krav1tar\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.pdb
+C:\Users\Krav1tar\source\repos\Stroki\Stroki\obj\Debug\net6.0\ref\Stroki.dll
