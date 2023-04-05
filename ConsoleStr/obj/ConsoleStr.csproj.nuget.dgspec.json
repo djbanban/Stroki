@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\visual studio\\sorting\\stroki\\ConsoleStr\\ConsoleStr.csproj": {}
+    "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\ConsoleStr\\ConsoleStr.csproj": {}
   },
   "projects": {
-    "F:\\visual studio\\sorting\\stroki\\ConsoleStr\\ConsoleStr.csproj": {
+    "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\ConsoleStr\\ConsoleStr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\visual studio\\sorting\\stroki\\ConsoleStr\\ConsoleStr.csproj",
+        "projectUniqueName": "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\ConsoleStr\\ConsoleStr.csproj",
         "projectName": "ConsoleStr",
-        "projectPath": "F:\\visual studio\\sorting\\stroki\\ConsoleStr\\ConsoleStr.csproj",
-        "packagesPath": "C:\\Users\\Nik\\.nuget\\packages\\",
-        "outputPath": "F:\\visual studio\\sorting\\stroki\\ConsoleStr\\obj\\",
+        "projectPath": "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\ConsoleStr\\ConsoleStr.csproj",
+        "packagesPath": "C:\\Users\\Dmitrich7\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\ConsoleStr\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dmitrich7\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj": {
-                "projectPath": "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj"
+              "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\Stroki\\Stroki.csproj": {
+                "projectPath": "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\Stroki\\Stroki.csproj"
               }
             }
           }
@@ -64,24 +63,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj": {
+    "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\Stroki\\Stroki.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj",
+        "projectUniqueName": "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\Stroki\\Stroki.csproj",
         "projectName": "Stroki",
-        "projectPath": "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj",
-        "packagesPath": "C:\\Users\\Nik\\.nuget\\packages\\",
-        "outputPath": "F:\\visual studio\\sorting\\stroki\\Stroki\\obj\\",
+        "projectPath": "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\Stroki\\Stroki.csproj",
+        "packagesPath": "C:\\Users\\Dmitrich7\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dmitrich7\\Desktop\\учбиба\\Среды разработки\\Новая папка\\Stroki\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dmitrich7\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -90,7 +89,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -124,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

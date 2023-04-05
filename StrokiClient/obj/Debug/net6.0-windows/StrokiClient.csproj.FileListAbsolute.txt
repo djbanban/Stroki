@@ -18,3 +18,13 @@ C:\Users\Krav1tar\source\repos\Stroki\StrokiClient\obj\Debug\net6.0-windows\ref\
 C:\Users\Krav1tar\source\repos\Stroki\StrokiClient\bin\Debug\net6.0-windows\Stroki.dll
 C:\Users\Krav1tar\source\repos\Stroki\StrokiClient\bin\Debug\net6.0-windows\Stroki.pdb
 C:\Users\Krav1tar\source\repos\Stroki\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.csproj.CopyComplete
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.csproj.AssemblyReference.cache
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.Form1.resources
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.csproj.GenerateResource.cache
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.AssemblyInfoInputs.cache
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.AssemblyInfo.cs
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.csproj.CoreCompileInputs.cache
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.dll
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\refint\StrokiClient.dll
+C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\StrokiClient\obj\Debug\net6.0-windows\StrokiClient.pdb
