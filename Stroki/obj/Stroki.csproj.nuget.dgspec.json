@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Krav1tar\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj": {}
+    "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Krav1tar\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj": {
+    "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Krav1tar\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj",
+        "projectUniqueName": "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj",
         "projectName": "Stroki",
-        "projectPath": "C:\\Users\\Krav1tar\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj",
-        "packagesPath": "C:\\Users\\Krav1tar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Krav1tar\\Source\\Repos\\Stroki\\Stroki\\obj\\",
+        "projectPath": "F:\\visual studio\\sorting\\stroki\\Stroki\\Stroki.csproj",
+        "packagesPath": "C:\\Users\\Nik\\.nuget\\packages\\",
+        "outputPath": "F:\\visual studio\\sorting\\stroki\\Stroki\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Krav1tar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
