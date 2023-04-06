@@ -52,3 +52,21 @@ C:\Users\nevzo\Source\Repos\Stroki\ConsoleStr\obj\Debug\net6.0\refint\ConsoleStr
 C:\Users\nevzo\Source\Repos\Stroki\ConsoleStr\obj\Debug\net6.0\ConsoleStr.pdb
 C:\Users\nevzo\Source\Repos\Stroki\ConsoleStr\obj\Debug\net6.0\ConsoleStr.genruntimeconfig.cache
 C:\Users\nevzo\Source\Repos\Stroki\ConsoleStr\obj\Debug\net6.0\ref\ConsoleStr.dll
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\bin\Debug\net6.0\ConsoleStr.exe
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\bin\Debug\net6.0\ConsoleStr.deps.json
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\bin\Debug\net6.0\ConsoleStr.runtimeconfig.json
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\bin\Debug\net6.0\ConsoleStr.dll
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\bin\Debug\net6.0\ConsoleStr.pdb
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\bin\Debug\net6.0\Stroki.dll
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\bin\Debug\net6.0\Stroki.pdb
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.csproj.AssemblyReference.cache
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.AssemblyInfoInputs.cache
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.AssemblyInfo.cs
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.csproj.CoreCompileInputs.cache
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.csproj.CopyComplete
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.dll
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\refint\ConsoleStr.dll
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.pdb
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ConsoleStr.genruntimeconfig.cache
+C:\Users\Dmitrich7\source\repos\Stroki\HUYNA EBANAYA\ConsoleStr\obj\Debug\net6.0\ref\ConsoleStr.dll

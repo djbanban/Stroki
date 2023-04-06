@@ -27,19 +27,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nevzo\\.nuget\\packages\\": {}
+    "C:\\Users\\Dmitrich7\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nevzo\\Source\\Repos\\Stroki\\StrokiClient\\StrokiClient.csproj",
+      "projectUniqueName": "C:\\Users\\Dmitrich7\\source\\repos\\Stroki\\HUYNA EBANAYA\\StrokiClient\\StrokiClient.csproj",
       "projectName": "StrokiClient",
-      "projectPath": "C:\\Users\\nevzo\\Source\\Repos\\Stroki\\StrokiClient\\StrokiClient.csproj",
-      "packagesPath": "C:\\Users\\nevzo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nevzo\\Source\\Repos\\Stroki\\StrokiClient\\obj\\",
+      "projectPath": "C:\\Users\\Dmitrich7\\source\\repos\\Stroki\\HUYNA EBANAYA\\StrokiClient\\StrokiClient.csproj",
+      "packagesPath": "C:\\Users\\Dmitrich7\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dmitrich7\\source\\repos\\Stroki\\HUYNA EBANAYA\\StrokiClient\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nevzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dmitrich7\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +58,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\nevzo\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj": {
-              "projectPath": "C:\\Users\\nevzo\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj"
+            "C:\\Users\\Dmitrich7\\source\\repos\\Stroki\\HUYNA EBANAYA\\Stroki\\Stroki.csproj": {
+              "projectPath": "C:\\Users\\Dmitrich7\\source\\repos\\Stroki\\HUYNA EBANAYA\\Stroki\\Stroki.csproj"
             }
           }
         }
@@ -87,7 +92,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

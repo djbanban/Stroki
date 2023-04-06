@@ -151,11 +151,14 @@ namespace Stroki
             {
                 occurrences = subStringIndexList.Count/2;
             }
-            
-            for (int j = 0; j < occurrences * 2 - 1; j += 2)
+            Console.WriteLine(subStringIndexList[0]);
+            s = SubStringDelete(s, subString, 1);
+            s = SubStringInsert(s, newSubString, subStringIndexList[0]);
+            for (int j = 2; j < occurrences * 2 - 1; j += 2)
             {
+                Console.WriteLine(subStringIndexList[j]);
                 s = SubStringDelete(s, subString, 1);
-                s = SubStringInsert(s, newSubString, subStringIndexList[j]+j/2);
+                s = SubStringInsert(s, newSubString, subStringIndexList[j]+(newSubString.Length- subString.Length));
             }
             return s;
         }

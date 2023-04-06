@@ -3,6 +3,7 @@ using System.Text;
 using System.IO;
 using System.Collections.Generic;
 using static Stroki.Parsing;
+using System.Data.SqlTypes;
 
 namespace ParseStroki
 {
@@ -12,11 +13,12 @@ namespace ParseStroki
         {
             int InsertionIndex = 1;
             int occurances = 2;
+            string subString = ",";
+            string newSubString = ".";
             Console.ForegroundColor = ConsoleColor.Green;
-            string s = "penispenispenisAApenis"; // "2/2";
-            Console.WriteLine(SubStringReplace(s, "A", "B", 2));
-            string subString = "abcd";
-            string newSubString = "CHECK";
+            string s = "-0,,2"; // "2/2";
+            //Console.WriteLine(SubStringReplace(s, ",", ".", 2));
+            Console.WriteLine(SubStringReplace(s, subString, newSubString, occurances));
             //List<int> subStringIndexList = SlowSubStringSearch(s, subString);
             //subStringIndexList = SlowSubStringSearch(s, subString);
             //s = SubStringReplace(s, subString, newSubString, occurances);
