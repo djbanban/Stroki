@@ -119,13 +119,48 @@ namespace Stroki
 
             return result;
         }
-        public static void KMPPrefix(string s)
+        static int[] GetPrefix(string s)
         {
+            int[] result = new int[s.Length];
+            result[0] = 0;
 
+            for (int i = 1; i < s.Length; i++)
+            {
+                int k = result[i - 1];
+                while (s[k] != s[i] && k > 0)
+
+                    k = result[k - 1];
+
+                if (s[k] == s[i])
+
+                    result[i] = k + 1;
+
+                else
+
+                    result[i] = 0;
+
+            }
+            return result;
         }
-        public static void KMPHelping()
-        {
 
+        static int FindSubstring(string pattern, string text)
+        {
+            int[] pf = GetPrefix(pattern);
+            int index = 0;
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                while (index > 0 && pattern[index] != text[i])
+                    index = pf[index - 1];
+                if (pattern[index] == text[i])
+                    index++;
+                if (index == pattern.Length)
+
+                    return i - index + 1;
+
+            }
+
+            return -1;
         }
         //основная kmp функция
         public static List<int> KMPSearch(string s, string subString)
