@@ -48,14 +48,16 @@ namespace Stroki
             return type.ToString();
         }
 
-        public static string CheckType(string s, out string type1)
+        public static string CheckType(string s)
         {
+            if (string.IsNullOrEmpty(s))
+                return "File is Empty";
+
             string type = "";
-            if (String.IsNullOrEmpty(s))
-                return type1 = "File is Empty".ToString();
             s = s.Trim();
             byte[] asciiBytes = Encoding.ASCII.GetBytes(s);
             int lenght = asciiBytes.Length;
+
             if (s.ToLower() == "false" || s.ToLower() == "true")
                 type = "bool";
             else if (s == "0")
@@ -67,58 +69,55 @@ namespace Stroki
                 else
                     type = CheckTypeNegative(asciiBytes, s, lenght, type);
             }
-            type1 = type;
             return type.ToString();
         }
-
         public static int[] CharToInt(char[] letters, int[] c, int n)
         {
             for (int i = 0; i < n; i++)
                 c[i] = (int)Char.GetNumericValue(letters[i]);
             return c;
         }
-
         public static void CharToDouble(char[] letters, string s) //доделать тк он конвертируеь запятую в -1
         {
             s = s.Replace(',', '.');
             int n = s.Length;
             int[] c = new int[n];
             string[] strings = s.Split('.');
-            Console.WriteLine(String.Join(" ", strings));
-            for (int i = 0; i < n; i++)
-            {
-                c[i] = (int)Char.GetNumericValue(letters[i]);
-            }
-            Console.WriteLine(String.Join("", c).Replace('0', ','));
-            return;
-        }
+            Console.WriteLine(string.Join(" ", strings));
+            for (int i = 0; i < strings[0].Length; i++)
+                Console.Write((int)Char.GetNumericValue(strings[0][i]));
 
+            Console.Write(".");
+            
+            for (int i = 0; i < strings[1].Length; i++)
+                Console.Write((int)Char.GetNumericValue(strings[1][i]));
+
+            //return c;
+        }
         public static dynamic Converter(string s, string type)
         {
             //создание массива char элементов и заполнение его символами из строки
             char[] letters = s.ToCharArray();
             int n = letters.GetLength(0);
             int[] c = new int[n];
-            Console.WriteLine(String.Join(" ", letters));
+        
+            Console.WriteLine(string.Join(" ", letters));
             if (type == "bool")
-                return s.ToString();
-            else if (type == "string")
-                return s.ToString();
-            else
-                if (type == "int")
+            {
+                if (s.ToLower() == "true")
+                    return true;
+                else if (s.ToLower() == "false") return false;
+            }
+            if (type == "string")
+                return s;
+            if (type == "int")
                 CharToInt(letters, c, n);
-            else
+            if (type == "double")
                 CharToDouble(letters, s);
-            string result = String.Join("", c);
-            return result.ToString();
-        }
 
-        static void Main()
-        {
-            string? type1 = null;
-            string s = "-1.2";
-            Console.WriteLine($"Проверка типа данных: {CheckType(s, out type1)}");
-            Console.WriteLine($"Конвертированная строка: {Converter(s, type1)}");
+            string result = string.Join("", c);
+
+            return result;
         }
         public static void KMPPrefix(string s)
         {
@@ -139,24 +138,40 @@ namespace Stroki
         //ещё один велосипед, заменяет подстрочку в строке на новую, учитывая количество вхождений подстроки(указывается пользователем)
         public static string SubStringReplace(string s,string subString,string newSubString,int occurrences)
         {
-            List<int> subStringIndexList = KMPSearch(s, subString);
+            List<int> subStringIndexList = SlowSubStringSearch(s, subString);//KMPSearch(s, subString);
             if (subStringIndexList.Count/2<occurrences)
             {
                 occurrences = subStringIndexList.Count/2;
             }
+            
+            for (int j = 0; j < occurrences * 2 - 1; j += 2)
+            {
+                s = SubStringDelete(s, subString, 1);
+                s = SubStringInsert(s, newSubString, subStringIndexList[j]+j/2);
+            }
             return s;
         }
+        //Удаляет подстроку с учётом введённого количества вхождений подстроки
         public static string SubStringDelete(string s, string subString,int occurrences)
         {
-            
+            string newString;
             List<int> subStringIndexList = SlowSubStringSearch(s, subString);//KMPSearch(s, subString); некич сделай кмп сёрч
             if (subStringIndexList.Count / 2 < occurrences)
             {
                 occurrences = subStringIndexList.Count / 2;
             }
-            for (int j = subStringIndexList.Count; j >= 2; j -= 2)
+            for (int j = occurrences*2 - 1; j > 0; j -= 2) 
             {
-                s = s.Remove(subStringIndexList[j], subStringIndexList[j+1]-subStringIndexList[j] + 1);
+                newString = "";
+                for (int i = 0; i < subStringIndexList[j - 1]; i++)
+                {
+                    newString += s[i];
+                }
+                for (int i = subStringIndexList[j]+1;i<s.Length;i++)
+                {
+                    newString += s[i];
+                }
+                s = newString;
             }
             return s;
         }
