@@ -11,7 +11,14 @@ namespace Stroki
         const int dot = 46; // ascii point
         const int zero = 48; // ascii number start
         const int nine = 57; // ascii number end
-
+        /// <summary>
+        /// вспомогательная функция для проверки на тип данных
+        /// </summary>
+        /// <param name="asciiBytes">используется для проверки на тип данных с помощью ASCII</param>
+        /// <param name="s">строка</param>
+        /// <param name="length">длина строки</param>
+        /// <param name="type">тип строки</param>
+        /// <returns></returns>
         public static string CheckTypeSup(byte[] asciiBytes, string s, int length, string type)
         {
             int count = 0;
@@ -30,6 +37,11 @@ namespace Stroki
                 type = "string";
             return type.ToString();
         }
+        /// <summary>
+        /// функция проверки строки на тип данных
+        /// </summary>
+        /// <param name="s">строка</param>
+        /// <returns></returns>
         public static string CheckType(string s)
         {
             if (string.IsNullOrEmpty(s))
@@ -49,29 +61,86 @@ namespace Stroki
             }
             return type.ToString();
         }
+        /// <summary>
+        /// вспомогательная функция переводящая символы в целые числа
+        /// </summary>
+        /// <param name="letters">массив символов,состоящий из символов строки s</param>
+        /// <param name="c">массив целых чисел</param>
+        /// <param name="n">длина массива символов letters</param>
+        /// <returns></returns>
         public static int[] CharToInt(char[] letters, int[] c, int n)
         {
             for (int i = 0; i < n; i++)
                 c[i] = (int)Char.GetNumericValue(letters[i]);
             return c;
         }
-        public static void CharToDouble(char[] letters, string s) //доделать тк он конвертируеь запятую в -1
+        /// <summary>
+        /// посимвольно переводим в int и переворачиваем строки
+        /// </summary>
+        /// <param name="c1r">массив</param>
+        /// <param name="l">длина целой части строки</param>
+        /// <param name="l1">длина дробной части строки</param>
+        static void CharToIntforDouble(int[] c1r, char[] l, int l1)
+        {
+            int index = l1 + 1;
+
+            for (int i = 1; i < l1 + 1; i++)
+            {
+                c1r[i] = (int)Char.GetNumericValue(l[i - 1]);
+            }
+            for (int i = l1 + 1; i < l.Length; i++)
+            {
+                c1r[index] = (int)Char.GetNumericValue(l[index]);
+                index++;
+            }
+            Array.Reverse(c1r);
+        }
+        /// <summary>
+        /// вспомогательная функция,в которой мы получаем ответ ,конвертированный в double
+        /// </summary>
+        /// <param name="c1r">массив</param>
+        /// <param name="minus">флаг для отрицательного числа</param>
+        /// <param name="l2">длина дробной части</param>
+        /// <returns></returns>
+        static double Print(int[] c1r, bool minus, int l2)
+        {
+            double result = 0;
+            int n = c1r.Length;
+            for (int i = 0; i < n; i++)
+                result += c1r[i] * Math.Pow(10, i);
+            double ans = result / Math.Pow(10, l2);
+            if (minus)
+                return (ans * (-1));
+            else
+                return (ans);
+        }
+        /// <summary>
+        /// основаная функция double,необходимая для конверта строки в double
+        /// </summary>
+        /// <param name="s">исходная строка</param>
+        static void Double(string s)
         {
             s = s.Replace(',', '.');
-            int n = s.Length;
-            int[] c = new int[n];
-            string[] strings = s.Split('.');
-            Console.WriteLine(string.Join(" ", strings));
-            for (int i = 0; i < strings[0].Length; i++)
-                Console.Write((int)Char.GetNumericValue(strings[0][i]));
-
-            Console.Write(".");
-            
-            for (int i = 0; i < strings[1].Length; i++)
-                Console.Write((int)Char.GetNumericValue(strings[1][i]));
-
-            //return c;
+            bool minus = false;
+            if (s.Contains('-'))
+                minus = true;
+            s = s.Trim('-');
+            char[] l = s.ToCharArray();
+            string[] parts = s.Split('.');
+            int l1 = parts[0].Length;
+            int l2 = parts[1].Length;
+            int[] c1r = new int[l.Length];
+            CharToIntforDouble(c1r, l, l1);
+            Print(c1r, minus, l2);
         }
+       
+        
+        /// <summary>
+        /// метод,позволяющий конвертировать строку в другой тип
+        /// </summary>
+        /// <param name="s">строка</param>
+        /// <param name="type">тип</param>
+        /// <returns></returns>
         public static dynamic Converter(string s, string type)
         {
             //создание массива char элементов и заполнение его символами из строки
@@ -91,12 +160,17 @@ namespace Stroki
             if (type == "int")
                 CharToInt(letters, c, n);
             if (type == "double")
-                CharToDouble(letters, s);
+                Double(s);
 
             string result = string.Join("", c);
 
             return result;
         }
+        /// <summary>
+        /// вспомогательная фукция КМП для вычисления префикса функции
+        /// </summary>
+        /// <param name="s">строка</param>
+        /// <returns></returns>
         static int[] GetPrefix(string s)
         {
             int[] result = new int[s.Length];
@@ -115,22 +189,25 @@ namespace Stroki
             }
             return result;
         }
-
-        static int FindSubstring(string pattern, string text)
+        /// <summary>
+        /// эффективный алгоритм нахождения точек входа подстроки в строку
+        /// </summary>
+        /// <param name="pattern"></param>
+        /// <param name="s">строка</param>
+        /// <returns></returns>
+        static int FindSubstring(string pattern, string s)
         {
             int[] pf = GetPrefix(pattern);
             int index = 0;
 
-            for (int i = 0; i < text.Length; i++)
+            for (int i = 0; i < s.Length; i++)
             {
-                while (index > 0 && pattern[index] != text[i])
+                while (index > 0 && pattern[index] != s[i])
                     index = pf[index - 1];
-                if (pattern[index] == text[i])
+                if (pattern[index] == s[i])
                     index++;
                 if (index == pattern.Length)
-
                     return i - index + 1;
-
             }
 
             return -1;
@@ -237,3 +314,51 @@ namespace Stroki
 
     }
 }
+/*
+static void CharToInt(int[] c1r, char[] l, int l1)
+    {
+        int index = l1+1;
+
+        for (int i = 1; i < l1+1; i++)
+        {
+            c1r[i] = (int)Char.GetNumericValue(l[i-1]);
+        }
+        for (int i = l1+1; i < l.Length; i++)
+        {
+            c1r[index] = (int)Char.GetNumericValue(l[index]);
+            index++;
+        }
+        Array.Reverse(c1r);
+    }
+
+    static double Print(int[] c1r, bool minus, int l2)
+    {
+        double result = 0;
+        int n = c1r.Length;
+        for (int i = 0;i < n;i++)
+            result += c1r[i] * Math.Pow(10, i);
+        double ans = result / Math.Pow(10,l2);
+        if (minus)
+            Console.WriteLine(ans * (-1));
+        else
+            Console.WriteLine(ans);
+        return result;
+    }
+
+    static void Main()
+    {
+        string s = "35345,426";
+        s = s.Replace(',','.');
+        bool minus = false;
+        if (s.Contains('-'))
+            minus = true;
+        s= s.Trim('-');
+        char[] l = s.ToCharArray();
+        string[] parts = s.Split('.');
+        int l1 = parts[0].Length;
+        int l2 = parts[1].Length;
+        int[] c1r = new int[l.Length];
+        CharToInt(c1r,l, l1);
+        Print(c1r, minus,l2);
+    }
+} */
