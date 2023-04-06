@@ -7,20 +7,21 @@ namespace Stroki
 {
     public class Parsing 
     {
+        const int minus = 45;
+        const int dot = 46; // ascii point
+        const int zero = 48; // ascii number start
+        const int nine = 57; // ascii number end
 
-        const int ap = 46; // ascii point
-        const int ans = 48; // ascii number start
-        const int ane = 57; // ascii number end
-
-        public static string CheckTypePositive(byte[] asciiBytes, string s, int lenght, string type)
+        public static string CheckTypeSup(byte[] asciiBytes, string s, int length, string type)
         {
             int count = 0;
-            for (int i = 0; i < lenght; i++)
-                if (asciiBytes[i] >= ans && asciiBytes[i] <= ane)
+            for (int i = 0; i < length; i++)
+                if (asciiBytes[i] >= zero && asciiBytes[i] <= nine || asciiBytes[i] == dot || asciiBytes[i] == minus)
+                    if (s.Count(e => e == minus) == 1 || s.Count(e => e == dot) == 1)
                     count++;
-            if (count == asciiBytes.Length && asciiBytes[0] != ans) // lenght - 1 тк один знак уходит на "-"
+            if (count == length && asciiBytes[0] != zero && asciiBytes[length - 1] != minus) // length - 1 тк один знак уходит на "-"
                 type = "int";
-            else if (count == lenght - 2 && asciiBytes[0] != ap && asciiBytes[lenght - 1] != ap && !s.Contains(' '))
+            else if (count == length && asciiBytes[0] != dot && asciiBytes[length - 1] != dot && !s.Contains(' ') && s.Count(e => e == dot) == 1)
                 if (s.Contains('.') || s.Contains(','))
                     type = "double";
                 else
@@ -29,34 +30,14 @@ namespace Stroki
                 type = "string";
             return type.ToString();
         }
-
-        public static string CheckTypeNegative(byte[] asciiBytes, string s, int lenght, string type)
-        {
-            int count = 0;
-            for (int i = 0; i < lenght; i++)
-                if (asciiBytes[i] >= ans && asciiBytes[i] <= ane)
-                    count++;
-            if (count == asciiBytes.Length - 1 && asciiBytes[0] != ans && asciiBytes[lenght - 1] != 45) // lenght - 1 тк один знак уходит на "-"
-                type = "int";
-            else if (count == lenght - 2 && asciiBytes[0] != ap && asciiBytes[lenght - 1] != ap && !s.Contains(' ') && asciiBytes[0] == 45)
-                if (s.Contains('.') || s.Contains(','))
-                    type = "double";
-                else
-                    type = "string";
-            else
-                type = "string";
-            return type.ToString();
-        }
-
         public static string CheckType(string s)
         {
             if (string.IsNullOrEmpty(s))
                 return "File is Empty";
-
+            SubStringReplace(s, ",", ".");
             string type = "";
             s = s.Trim();
             byte[] asciiBytes = Encoding.ASCII.GetBytes(s);
-            int lenght = asciiBytes.Length;
 
             if (s.ToLower() == "false" || s.ToLower() == "true")
                 type = "bool";
@@ -64,10 +45,7 @@ namespace Stroki
                 type = "int";
             else
             {
-                if (!s.Contains('-'))
-                    type = CheckTypePositive(asciiBytes, s, lenght, type);
-                else
-                    type = CheckTypeNegative(asciiBytes, s, lenght, type);
+                type = CheckTypeSup(asciiBytes, s, s.Length, type);
             }
             return type.ToString();
         }
@@ -128,15 +106,10 @@ namespace Stroki
             {
                 int k = result[i - 1];
                 while (s[k] != s[i] && k > 0)
-
                     k = result[k - 1];
-
                 if (s[k] == s[i])
-
                     result[i] = k + 1;
-
                 else
-
                     result[i] = 0;
 
             }
@@ -171,7 +144,7 @@ namespace Stroki
             return subStringIndexList;
         }
         //ещё один велосипед, заменяет подстрочку в строке на новую, учитывая количество вхождений подстроки(указывается пользователем)
-        public static string SubStringReplace(string s,string subString,string newSubString,int occurrences)
+        public static string SubStringReplace(string s,string subString,string newSubString,int occurrences = 1)
         {
             List<int> subStringIndexList = SlowSubStringSearch(s, subString);//KMPSearch(s, subString);
             if (subStringIndexList.Count/2<occurrences)
@@ -208,6 +181,7 @@ namespace Stroki
                 }
                 s = newString;
             }
+            Console.WriteLine(s);
             return s;
         }
         //велосипед(String.Insert())

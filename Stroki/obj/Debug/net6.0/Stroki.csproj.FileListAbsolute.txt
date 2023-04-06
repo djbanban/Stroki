@@ -34,3 +34,15 @@ C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Нова
 C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\Stroki\obj\Debug\net6.0\refint\Stroki.dll
 C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\Stroki\obj\Debug\net6.0\Stroki.pdb
 C:\Users\Dmitrich7\Desktop\учбиба\Среды разработки\Новая папка\Stroki\obj\Debug\net6.0\ref\Stroki.dll
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\bin\Debug\net6.0\Stroki.deps.json
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\bin\Debug\net6.0\Stroki.dll
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\bin\Debug\net6.0\Stroki.pdb
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.csproj.AssemblyReference.cache
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.AssemblyInfoInputs.cache
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.AssemblyInfo.cs
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.csproj.CoreCompileInputs.cache
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.dll
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\refint\Stroki.dll
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.pdb
+C:\Users\nevzo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\ref\Stroki.dll

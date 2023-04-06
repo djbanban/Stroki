@@ -13,13 +13,13 @@ namespace ParseStroki
             int InsertionIndex = 1;
             int occurances = 2;
             Console.ForegroundColor = ConsoleColor.Green;
-            string s = "abcdJIJAabcdJIJAabcd"; // "2/2";
-            //Console.WriteLine(CheckType(s));
+            string s = "penispenispenisAApenis"; // "2/2";
+            Console.WriteLine(SubStringReplace(s, "A", "B", 2));
             string subString = "abcd";
             string newSubString = "CHECK";
-            List<int> subStringIndexList = SlowSubStringSearch(s, subString);
+            //List<int> subStringIndexList = SlowSubStringSearch(s, subString);
             //subStringIndexList = SlowSubStringSearch(s, subString);
-            s = SubStringReplace(s, subString, newSubString, occurances);
+            //s = SubStringReplace(s, subString, newSubString, occurances);
             Console.WriteLine(s);
             //foreach (int subStringIndex in subStringIndexList)
             //{
