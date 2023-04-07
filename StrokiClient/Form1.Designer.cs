@@ -44,7 +44,7 @@
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             comboBox1 = new ComboBox();
-            textBox7 = new TextBox();
+            NumberBTN = new TextBox();
             textBox8 = new TextBox();
             SuspendLayout();
             // 
@@ -114,6 +114,7 @@
             FindSubStrBTN.TabIndex = 5;
             FindSubStrBTN.Text = "Найти подстроки";
             FindSubStrBTN.UseVisualStyleBackColor = true;
+            FindSubStrBTN.Click += FindSubStrBTN_Click;
             // 
             // Out
             // 
@@ -222,14 +223,14 @@
             comboBox1.TabIndex = 16;
             comboBox1.Text = "Выберите тип преобразования";
             // 
-            // textBox7
+            // NumberBTN
             // 
-            textBox7.Cursor = Cursors.IBeam;
-            textBox7.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(703, 104);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(199, 29);
-            textBox7.TabIndex = 18;
+            NumberBTN.Cursor = Cursors.IBeam;
+            NumberBTN.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            NumberBTN.Location = new Point(703, 104);
+            NumberBTN.Name = "NumberBTN";
+            NumberBTN.Size = new Size(199, 29);
+            NumberBTN.TabIndex = 18;
             // 
             // textBox8
             // 
@@ -248,7 +249,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(940, 483);
-            Controls.Add(textBox7);
+            Controls.Add(NumberBTN);
             Controls.Add(textBox8);
             Controls.Add(comboBox1);
             Controls.Add(textBox6);
@@ -289,7 +290,7 @@
         private TextBox textBox6;
         private TextBox textBox1;
         private ComboBox comboBox1;
-        private TextBox textBox7;
+        private TextBox NumberBTN;
         private TextBox textBox8;
     }
 }

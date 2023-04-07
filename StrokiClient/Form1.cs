@@ -11,7 +11,12 @@ namespace StrokiClient
         private void CheckTypeBTN_Click(object sender, EventArgs e)
         {
             Out.Text = CheckType(StrInput.Text);
-            Out.Text += $"\n{comboBox1.SelectedIndex}";
         }
+
+        private void FindSubStrBTN_Click(object sender, EventArgs e)
+        {
+            //Out.Text = FindSubstring(StrInput.Text, SubStrInput.Text);
+        }
+
     }
 }

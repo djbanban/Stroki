@@ -72,11 +72,31 @@ namespace Stroki
         /// <param name="c">массив целых чисел</param>
         /// <param name="n">длина массива символов letters</param>
         /// <returns></returns>
-        public static int[] CharToInt(char[] letters, int[] c, int n)
+        static int CharToInt(int[] c1r, int l1, string s, string type)
         {
-            for (int i = 0; i < n; i++)
-                c[i] = (int)Char.GetNumericValue(letters[i]);
-            return c;
+            int index = l1 + 1;
+            int resint = 0;
+            char[] letters = s.ToCharArray();
+            if (type == "double")
+                for (int i = 1; i < l1 + 1; i++)
+                {
+                    c1r[i] = (int)Char.GetNumericValue(letters[i - 1]);
+                }
+            for (int i = l1 + 1; i < letters.Length; i++)
+            {
+                c1r[index] = (int)Char.GetNumericValue(letters[index]);
+                index++;
+            }
+            Array.Reverse(c1r);
+            if (type == "int")
+            {
+                for (int i = 0; i < s.Length; i++)
+                    c1r[i] = (int)Char.GetNumericValue(letters[i]);
+                Array.Reverse(c1r);
+                for (int i = 0; i < s.Length; i++)
+                    resint += (int)(c1r[i] * Math.Pow(10, i));
+            }
+            return resint;
         }
         /// <summary>
         /// посимвольно переводим в int и переворачиваем строки
@@ -102,57 +122,56 @@ namespace Stroki
         /// <summary>
         /// вспомогательная функция,в которой мы получаем ответ ,конвертированный в double
         /// </summary>
-        /// <param name="c1r">массив</param>
+        /// <param name="cr">массив</param>
         /// <param name="minus">флаг для отрицательного числа</param>
         /// <param name="l2">длина дробной части</param>
         /// <returns></returns>
-        static double Print(int[] c1r, bool minus, int l2)
+        static double Print(int[] cr, bool minus, int l2)
         {
             double result = 0;
-            int n = c1r.Length;
+            int n = cr.Length;
             for (int i = 0; i < n; i++)
-                result += c1r[i] * Math.Pow(10, i);
+                result += cr[i] * Math.Pow(10, i);
             double ans = result / Math.Pow(10, l2);
             if (minus)
-                return (ans * (-1));
+                result = ans * (-1);
             else
-                return (ans);
+                result = ans;
+            return result;
         }
         /// <summary>
         /// основаная функция double,необходимая для конверта строки в double
         /// </summary>
         /// <param name="s">исходная строка</param>
-        static void Double(string s)
+        static double CharToDouble(string s)
         {
-            s = s.Replace(',', '.');
             bool minus = false;
             if (s.Contains('-'))
                 minus = true;
-            s = s.Trim('-');
-            char[] l = s.ToCharArray();
+            s = s.Trim('-').Replace(',', '.');
+            char[] letters = s.ToCharArray();
+            int[] cr = new int[letters.Length];
             string[] parts = s.Split('.');
             int l1 = parts[0].Length;
             int l2 = parts[1].Length;
-            int[] c1r = new int[l.Length];
-            CharToIntforDouble(c1r, l, l1);
-            Print(c1r, minus, l2);
+            CharToInt(cr, l1, s, "double");
+            double res = Print(cr, minus, l2);
+            return res;
         }
-       
-        
+
+
         /// <summary>
         /// метод,позволяющий конвертировать строку в другой тип
         /// </summary>
         /// <param name="s">строка</param>
         /// <param name="type">тип</param>
         /// <returns></returns>
-        public static dynamic Converter(string s, string type)
+        static dynamic Converter(string s, string type)
         {
-            //создание массива char элементов и заполнение его символами из строки
+            dynamic result = 0;
             char[] letters = s.ToCharArray();
-            int n = letters.GetLength(0);
+            int n = s.Length;
             int[] c = new int[n];
-        
-            Console.WriteLine(string.Join(" ", letters));
             if (type == "bool")
             {
                 if (s.ToLower() == "true")
@@ -162,11 +181,9 @@ namespace Stroki
             if (type == "string")
                 return s;
             if (type == "int")
-                CharToInt(letters, c, n);
+                result = CharToInt(c, n, s, "int");
             if (type == "double")
-                Double(s);
-
-            string result = string.Join("", c);
+                result = CharToDouble(s);
 
             return result;
         }
