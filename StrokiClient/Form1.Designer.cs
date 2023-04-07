@@ -152,7 +152,7 @@
             ReplaceSubStrBTN.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             ReplaceSubStrBTN.Location = new Point(193, 170);
             ReplaceSubStrBTN.Name = "ReplaceSubStrBTN";
-            ReplaceSubStrBTN.Size = new Size(146, 41);
+            ReplaceSubStrBTN.Size = new Size(149, 41);
             ReplaceSubStrBTN.TabIndex = 9;
             ReplaceSubStrBTN.Text = "Заменить подстроку";
             ReplaceSubStrBTN.UseVisualStyleBackColor = true;
