@@ -11,7 +11,7 @@ namespace ParseStroki
     {
         static void Main()
         {
-            int InsertionIndex = 1;
+            /*int InsertionIndex = 1;
             int occurances = 2;
             string subString = ",";
             string newSubString = ".";
@@ -29,6 +29,7 @@ namespace ParseStroki
             //}
             //string s = "222.5";
             Converter(s, "double");
+            */
         }
     }
 }

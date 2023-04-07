@@ -11,6 +11,7 @@ namespace StrokiClient
         private void CheckTypeBTN_Click(object sender, EventArgs e)
         {
             Out.Text = CheckType(StrInput.Text);
+            Out.Text += $"\n{comboBox1.SelectedIndex}";
         }
     }
 }

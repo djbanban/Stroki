@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1bZktJMGm+8emB/03d1u+UBYTvQfBq+MO8WU9AXyjVuoDBlJF7DjWZGGhRnyPtRA9k3DrMx/wjze4LBb/IMGLw==",
+  "dgSpecHash": "2coM4cLdKQhJf0jUymSZQAA+Se39b3SHdrkCDDalq86lZY4aLmilqZ35guTgXqt079vPI8Y/E+eB0FWPJSrsGw==",
   "success": true,
-  "projectFilePath": "F:\\lets go\\StrokiClient\\StrokiClient.csproj",
+  "projectFilePath": "C:\\Users\\glebo\\Source\\Repos\\Stroki\\StrokiClient\\StrokiClient.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

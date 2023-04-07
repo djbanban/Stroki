@@ -7,57 +7,61 @@ namespace Stroki
 {
     public class Parsing 
     {
-        const int minus = 45;
-        const int dot = 46; // ascii point
-        const int zero = 48; // ascii number start
-        const int nine = 57; // ascii number end
-        /// <summary>
-        /// вспомогательная функция для проверки на тип данных
-        /// </summary>
-        /// <param name="asciiBytes">используется для проверки на тип данных с помощью ASCII</param>
-        /// <param name="s">строка</param>
-        /// <param name="length">длина строки</param>
-        /// <param name="type">тип строки</param>
-        /// <returns></returns>
-        public static string CheckTypeSup(byte[] asciiBytes, string s, int length, string type)
+        const int ap = 46; // ascii point
+        const int ans = 48; // ascii number start
+        const int ane = 57; // ascii number end
+
+        static string CheckTypeSub(int countpoint, int countminus, byte[] asciiBytes, out string type)
         {
             int count = 0;
-            for (int i = 0; i < length; i++)
-                if (asciiBytes[i] >= zero && asciiBytes[i] <= nine || asciiBytes[i] == dot || asciiBytes[i] == minus)
-                    if (s.Count(e => e == minus) == 1 || s.Count(e => e == dot) == 1)
+            for (int i = 0; i < asciiBytes.Length; i++)
+                if (asciiBytes[i] >= 48 && asciiBytes[i] <= 57)
                     count++;
-            if (count == length && asciiBytes[0] != zero && asciiBytes[length - 1] != minus) // length - 1 тк один знак уходит на "-"
-                type = "int";
-            else if (count == length && asciiBytes[0] != dot && asciiBytes[length - 1] != dot && !s.Contains(' ') && s.Count(e => e == dot) == 1)
-                if (s.Contains('.') || s.Contains(','))
+            if (countminus == 1 && asciiBytes[0] == 45) //для минуса
+                if (count == asciiBytes.Length - 1)
+                    type = "int";
+                else if (count == asciiBytes.Length - 2 && countminus == 1)
+                    type = "double";
+                else
+                    type = "string";
+            else if (countminus == 0)
+                if (count == asciiBytes.Length)
+                    type = "int";
+                else if (count == asciiBytes.Length - 1 && countpoint == 1 && asciiBytes[0] != 46 && asciiBytes[0] != 44)//код для запятой вместо 1
                     type = "double";
                 else
                     type = "string";
             else
                 type = "string";
-            return type.ToString();
+            return type;
         }
-        /// <summary>
-        /// функция проверки строки на тип данных
-        /// </summary>
-        /// <param name="s">строка</param>
-        /// <returns></returns>
+
+        static void Counter(byte[] asciiBytes, out int cm, out int cp)
+        {
+            int com = 0; int cop = 0;
+            foreach (byte c in asciiBytes)
+                if (c == 46 || c == 44)
+                    cop++;
+                else if (c == 45) //вместо единицы аски код для запятой нужно
+                    com++;
+            cm = com; cp = cop;
+        }
+
         public static string CheckType(string s)
         {
-            if (string.IsNullOrEmpty(s))
-                return "File is Empty";
-            SubStringReplace(s, ",", ".");
-            string type = "";
-            s = s.Trim();
+            string type;
+            int cp = 0; int cm = 0;
             byte[] asciiBytes = Encoding.ASCII.GetBytes(s);
-
+            int lenght = asciiBytes.Length;
+            if (String.IsNullOrEmpty(s))
+                type = "File is Empty".ToString();
+            s = s.Trim();
             if (s.ToLower() == "false" || s.ToLower() == "true")
                 type = "bool";
-            else if (s == "0")
-                type = "int";
             else
             {
-                type = CheckTypeSup(asciiBytes, s, s.Length, type);
+                Counter(asciiBytes, out cm, out cp);
+                CheckTypeSub(cp, cm, asciiBytes, out type);
             }
             return type.ToString();
         }
