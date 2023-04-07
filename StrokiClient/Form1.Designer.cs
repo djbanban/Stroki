@@ -43,9 +43,10 @@
             textBox3 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
-            comboBox1 = new ComboBox();
             NumberBTN = new TextBox();
             textBox8 = new TextBox();
+            textBox7 = new TextBox();
+            textBox9 = new TextBox();
             SuspendLayout();
             // 
             // textBox1
@@ -108,9 +109,10 @@
             // 
             // FindSubStrBTN
             // 
+            FindSubStrBTN.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             FindSubStrBTN.Location = new Point(38, 170);
             FindSubStrBTN.Name = "FindSubStrBTN";
-            FindSubStrBTN.Size = new Size(135, 41);
+            FindSubStrBTN.Size = new Size(149, 41);
             FindSubStrBTN.TabIndex = 5;
             FindSubStrBTN.Text = "Найти подстроки";
             FindSubStrBTN.UseVisualStyleBackColor = true;
@@ -118,8 +120,8 @@
             // 
             // Out
             // 
-            Out.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Out.Location = new Point(38, 300);
+            Out.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            Out.Location = new Point(38, 291);
             Out.Name = "Out";
             Out.Size = new Size(864, 171);
             Out.TabIndex = 6;
@@ -127,45 +129,51 @@
             // 
             // InsertSubStrBTN
             // 
+            InsertSubStrBTN.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             InsertSubStrBTN.Location = new Point(38, 217);
             InsertSubStrBTN.Name = "InsertSubStrBTN";
-            InsertSubStrBTN.Size = new Size(276, 35);
+            InsertSubStrBTN.Size = new Size(149, 35);
             InsertSubStrBTN.TabIndex = 7;
             InsertSubStrBTN.Text = "Вставка подстроки";
             InsertSubStrBTN.UseVisualStyleBackColor = true;
             // 
             // DeleteSubStrBTN
             // 
-            DeleteSubStrBTN.Location = new Point(38, 249);
+            DeleteSubStrBTN.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            DeleteSubStrBTN.Location = new Point(193, 217);
             DeleteSubStrBTN.Name = "DeleteSubStrBTN";
-            DeleteSubStrBTN.Size = new Size(276, 36);
+            DeleteSubStrBTN.Size = new Size(149, 36);
             DeleteSubStrBTN.TabIndex = 8;
             DeleteSubStrBTN.Text = "Удаление подстроки";
             DeleteSubStrBTN.UseVisualStyleBackColor = true;
             // 
             // ReplaceSubStrBTN
             // 
-            ReplaceSubStrBTN.Location = new Point(179, 170);
+            ReplaceSubStrBTN.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            ReplaceSubStrBTN.Location = new Point(193, 170);
             ReplaceSubStrBTN.Name = "ReplaceSubStrBTN";
-            ReplaceSubStrBTN.Size = new Size(135, 41);
+            ReplaceSubStrBTN.Size = new Size(146, 41);
             ReplaceSubStrBTN.TabIndex = 9;
             ReplaceSubStrBTN.Text = "Заменить подстроку";
             ReplaceSubStrBTN.UseVisualStyleBackColor = true;
             // 
             // TransformTypeBTN
             // 
-            TransformTypeBTN.Location = new Point(636, 211);
+            TransformTypeBTN.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            TransformTypeBTN.Location = new Point(625, 170);
             TransformTypeBTN.Name = "TransformTypeBTN";
             TransformTypeBTN.Size = new Size(266, 41);
             TransformTypeBTN.TabIndex = 11;
-            TransformTypeBTN.Text = "Преобразовать";
+            TransformTypeBTN.Text = "Преобразование к нужному типу";
             TransformTypeBTN.UseVisualStyleBackColor = true;
+            TransformTypeBTN.Click += TransformTypeBTN_Click;
             // 
             // TypeCheckBTN
             // 
-            TypeCheckBTN.Location = new Point(350, 174);
+            TypeCheckBTN.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            TypeCheckBTN.Location = new Point(625, 244);
             TypeCheckBTN.Name = "TypeCheckBTN";
-            TypeCheckBTN.Size = new Size(255, 41);
+            TypeCheckBTN.Size = new Size(266, 41);
             TypeCheckBTN.TabIndex = 12;
             TypeCheckBTN.Text = "Определить тип строки";
             TypeCheckBTN.UseVisualStyleBackColor = true;
@@ -176,7 +184,7 @@
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Enabled = false;
             textBox3.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(76, 139);
+            textBox3.Location = new Point(38, 139);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
             textBox3.Size = new Size(221, 28);
@@ -189,10 +197,10 @@
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Enabled = false;
             textBox5.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(350, 139);
+            textBox5.Location = new Point(625, 212);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(255, 28);
+            textBox5.Size = new Size(277, 28);
             textBox5.TabIndex = 14;
             textBox5.Text = "Парсинг (разбор) строк";
             textBox5.TextAlign = HorizontalAlignment.Center;
@@ -211,17 +219,6 @@
             textBox6.TabIndex = 15;
             textBox6.Text = "Преобразование текста";
             textBox6.TextAlign = HorizontalAlignment.Center;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Идентификатор", "Целое число", "Вещественное число", "Логическое значение" });
-            comboBox1.Location = new Point(636, 173);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(266, 29);
-            comboBox1.TabIndex = 16;
-            comboBox1.Text = "Выберите тип преобразования";
             // 
             // NumberBTN
             // 
@@ -244,14 +241,36 @@
             textBox8.TabIndex = 17;
             textBox8.Text = "Количество вхождений:";
             // 
+            // textBox7
+            // 
+            textBox7.Cursor = Cursors.IBeam;
+            textBox7.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox7.Location = new Point(345, 170);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(266, 39);
+            textBox7.TabIndex = 19;
+            // 
+            // textBox9
+            // 
+            textBox9.BorderStyle = BorderStyle.None;
+            textBox9.Enabled = false;
+            textBox9.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox9.Location = new Point(345, 145);
+            textBox9.Name = "textBox9";
+            textBox9.ReadOnly = true;
+            textBox9.Size = new Size(146, 22);
+            textBox9.TabIndex = 20;
+            textBox9.Text = "Новая подстрока:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(940, 483);
+            Controls.Add(textBox9);
+            Controls.Add(textBox7);
             Controls.Add(NumberBTN);
             Controls.Add(textBox8);
-            Controls.Add(comboBox1);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox3);
@@ -289,8 +308,9 @@
         private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox1;
-        private ComboBox comboBox1;
         private TextBox NumberBTN;
         private TextBox textBox8;
+        private TextBox textBox7;
+        private TextBox textBox9;
     }
 }

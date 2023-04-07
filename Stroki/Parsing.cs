@@ -11,7 +11,7 @@ namespace Stroki
         const int ans = 48; // ascii number start
         const int ane = 57; // ascii number end
 
-        static string CheckTypeSub(int countpoint, int countminus, byte[] asciiBytes, out string type)
+        public static string CheckTypeSub(int countpoint, int countminus, byte[] asciiBytes, out string type)
         {
             int count = 0;
             for (int i = 0; i < asciiBytes.Length; i++)
@@ -36,7 +36,7 @@ namespace Stroki
             return type;
         }
 
-        static void Counter(byte[] asciiBytes, out int cm, out int cp)
+        public static void Counter(byte[] asciiBytes, out int cm, out int cp)
         {
             int com = 0; int cop = 0;
             foreach (byte c in asciiBytes)
@@ -72,7 +72,7 @@ namespace Stroki
         /// <param name="c">массив целых чисел</param>
         /// <param name="n">длина массива символов letters</param>
         /// <returns></returns>
-        static int CharToInt(int[] c1r, int l1, string s, string type)
+        public static int CharToInt(int[] c1r, int l1, string s, string type)
         {
             int index = l1 + 1;
             int resint = 0;
@@ -104,7 +104,7 @@ namespace Stroki
         /// <param name="c1r">массив</param>
         /// <param name="l">длина целой части строки</param>
         /// <param name="l1">длина дробной части строки</param>
-        static void CharToIntforDouble(int[] c1r, char[] l, int l1)
+        public static void CharToIntforDouble(int[] c1r, char[] l, int l1)
         {
             int index = l1 + 1;
 
@@ -126,7 +126,7 @@ namespace Stroki
         /// <param name="minus">флаг для отрицательного числа</param>
         /// <param name="l2">длина дробной части</param>
         /// <returns></returns>
-        static double Print(int[] cr, bool minus, int l2)
+        public static double Print(int[] cr, bool minus, int l2)
         {
             double result = 0;
             int n = cr.Length;
@@ -143,7 +143,7 @@ namespace Stroki
         /// основаная функция double,необходимая для конверта строки в double
         /// </summary>
         /// <param name="s">исходная строка</param>
-        static double CharToDouble(string s)
+        public static double CharToDouble(string s)
         {
             bool minus = false;
             if (s.Contains('-'))
@@ -166,7 +166,7 @@ namespace Stroki
         /// <param name="s">строка</param>
         /// <param name="type">тип</param>
         /// <returns></returns>
-        static dynamic Converter(string s, string type)
+        public static dynamic Converter(string s, string type)
         {
             dynamic result = 0;
             char[] letters = s.ToCharArray();
@@ -184,7 +184,6 @@ namespace Stroki
                 result = CharToInt(c, n, s, "int");
             if (type == "double")
                 result = CharToDouble(s);
-
             return result;
         }
         /// <summary>
@@ -192,7 +191,7 @@ namespace Stroki
         /// </summary>
         /// <param name="s">строка</param>
         /// <returns></returns>
-        static int[] GetPrefix(string s)
+        public static int[] GetPrefix(string s)
         {
             int[] result = new int[s.Length];
             result[0] = 0;
@@ -216,7 +215,7 @@ namespace Stroki
         /// <param name="pattern"></param>
         /// <param name="s">строка</param>
         /// <returns></returns>
-        static int FindSubstring(string pattern, string s)
+        public static string FindSubstring(string pattern, string s)
         {
             int[] pf = GetPrefix(pattern);
             int index = 0;
@@ -228,20 +227,19 @@ namespace Stroki
                 if (pattern[index] == s[i])
                     index++;
                 if (index == pattern.Length)
-                    return i - index + 1;
+                    return $"{i - index + 1}";
             }
-
-            return -1;
-        }
-        //основная kmp функция
-        public static List<int> KMPSearch(string s, string subString)
-        {
-            //лист с индексами начала и конца подстрок(нужен для методов использующиъ поиск подстрок)
-            List<int> subStringIndexList = new List<int>(); 
-
-            return subStringIndexList;
+            return "";
         }
         //ещё один велосипед, заменяет подстрочку в строке на новую, учитывая количество вхождений подстроки(указывается пользователем)
+        /// <summary>
+        /// заменяет подстрочку в строке на новую, учитывая количество вхождений подстроки(указывается пользователем)
+        /// </summary>
+        /// <param name="s">Исходная строка</param>
+        /// <param name="subString">Подстрока</param>
+        /// <param name="newSubString">Новая подстрока</param>
+        /// <param name="occurrences">Количество вхождений</param>
+        /// <returns></returns>
         public static string SubStringReplace(string s,string subString,string newSubString,int occurrences = 1)
         {
             List<int> subStringIndexList = SlowSubStringSearch(s, subString);//KMPSearch(s, subString);
@@ -311,75 +309,31 @@ namespace Stroki
             int startIndex;
             int endIndex = 0;
             bool breakFlag;
-            for (int i = 0;i<s.Length;i++)
+            try
             {
-                startIndex = i;
-                breakFlag = false;
-                for (int j = 0;j<subString.Length;j++)
+                for (int i = 0; i < s.Length; i++)
                 {
-                    if (subString[j] != s[j+i])
+                    startIndex = i;
+                    breakFlag = false;
+                    for (int j = 0; j < subString.Length; j++)
                     {
-                        breakFlag = true;
-                        break;
+                        if (subString[j] != s[j + i])
+                        {
+                            breakFlag = true;
+                            break;
+                        }
+                        endIndex = j + i;
                     }
-                    endIndex = j+i;
-                }
-                if (breakFlag == false)
-                {
-                    subStringIndexList.Add(startIndex);
-                    subStringIndexList.Add(endIndex);
+                    if (breakFlag == false)
+                    {
+                        subStringIndexList.Add(startIndex);
+                        subStringIndexList.Add(endIndex);
+                    }
                 }
             }
+            catch (Exception) { }
             return subStringIndexList;
         }
 
     }
 }
-/*
-static void CharToInt(int[] c1r, char[] l, int l1)
-    {
-        int index = l1+1;
-
-        for (int i = 1; i < l1+1; i++)
-        {
-            c1r[i] = (int)Char.GetNumericValue(l[i-1]);
-        }
-        for (int i = l1+1; i < l.Length; i++)
-        {
-            c1r[index] = (int)Char.GetNumericValue(l[index]);
-            index++;
-        }
-        Array.Reverse(c1r);
-    }
-
-    static double Print(int[] c1r, bool minus, int l2)
-    {
-        double result = 0;
-        int n = c1r.Length;
-        for (int i = 0;i < n;i++)
-            result += c1r[i] * Math.Pow(10, i);
-        double ans = result / Math.Pow(10,l2);
-        if (minus)
-            Console.WriteLine(ans * (-1));
-        else
-            Console.WriteLine(ans);
-        return result;
-    }
-
-    static void Main()
-    {
-        string s = "35345,426";
-        s = s.Replace(',','.');
-        bool minus = false;
-        if (s.Contains('-'))
-            minus = true;
-        s= s.Trim('-');
-        char[] l = s.ToCharArray();
-        string[] parts = s.Split('.');
-        int l1 = parts[0].Length;
-        int l2 = parts[1].Length;
-        int[] c1r = new int[l.Length];
-        CharToInt(c1r,l, l1);
-        Print(c1r, minus,l2);
-    }
-} */
