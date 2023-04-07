@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\glebo\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj": {}
+    "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\Stroki\\Stroki.csproj": {}
   },
   "projects": {
-    "C:\\Users\\glebo\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj": {
+    "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\Stroki\\Stroki.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\glebo\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj",
+        "projectUniqueName": "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\Stroki\\Stroki.csproj",
         "projectName": "Stroki",
-        "projectPath": "C:\\Users\\glebo\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj",
-        "packagesPath": "C:\\Users\\glebo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\glebo\\Source\\Repos\\Stroki\\Stroki\\obj\\",
+        "projectPath": "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\Stroki\\Stroki.csproj",
+        "packagesPath": "C:\\Users\\Krav1tar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\Stroki\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\glebo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Krav1tar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

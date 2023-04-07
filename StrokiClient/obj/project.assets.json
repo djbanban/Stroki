@@ -27,23 +27,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\glebo\\.nuget\\packages\\": {},
+    "C:\\Users\\Krav1tar\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\glebo\\Source\\Repos\\Stroki\\StrokiClient\\StrokiClient.csproj",
+      "projectUniqueName": "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\StrokiClient\\StrokiClient.csproj",
       "projectName": "StrokiClient",
-      "projectPath": "C:\\Users\\glebo\\Source\\Repos\\Stroki\\StrokiClient\\StrokiClient.csproj",
-      "packagesPath": "C:\\Users\\glebo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\glebo\\Source\\Repos\\Stroki\\StrokiClient\\obj\\",
+      "projectPath": "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\StrokiClient\\StrokiClient.csproj",
+      "packagesPath": "C:\\Users\\Krav1tar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\StrokiClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\glebo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Krav1tar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -58,8 +58,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\glebo\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj": {
-              "projectPath": "C:\\Users\\glebo\\Source\\Repos\\Stroki\\Stroki\\Stroki.csproj"
+            "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\Stroki\\Stroki.csproj": {
+              "projectPath": "C:\\Users\\Krav1tar\\source\\repos\\Stroki\\Stroki\\Stroki.csproj"
             }
           }
         }
@@ -92,7 +92,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

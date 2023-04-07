@@ -33,40 +33,46 @@
             StrInput = new TextBox();
             SubStrInput = new TextBox();
             textBox4 = new TextBox();
-            button1 = new Button();
+            FindSubStrBTN = new Button();
             Out = new RichTextBox();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            comboBox1 = new ComboBox();
-            button5 = new Button();
+            InsertSubStrBTN = new Button();
+            DeleteSubStrBTN = new Button();
+            ReplaceSubStrBTN = new Button();
+            TransformTypeBTN = new Button();
             TypeCheckBTN = new Button();
+            textBox3 = new TextBox();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
+            comboBox1 = new ComboBox();
+            textBox7 = new TextBox();
+            textBox8 = new TextBox();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.BackColor = SystemColors.InactiveBorder;
+            textBox1.BackColor = SystemColors.Menu;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Enabled = false;
-            textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(334, 12);
+            textBox1.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = SystemColors.ActiveCaptionText;
+            textBox1.Location = new Point(330, 5);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(317, 32);
+            textBox1.Size = new Size(317, 37);
             textBox1.TabIndex = 0;
             textBox1.TabStop = false;
-            textBox1.Text = "Обработка строк";
+            textBox1.Text = "Проект «Строки»";
             textBox1.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Enabled = false;
-            textBox2.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(38, 50);
+            textBox2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(38, 30);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(130, 23);
+            textBox2.Size = new Size(135, 22);
             textBox2.TabIndex = 1;
             textBox2.Text = "Входная строка:";
             // 
@@ -74,145 +80,216 @@
             // 
             StrInput.Cursor = Cursors.IBeam;
             StrInput.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            StrInput.Location = new Point(38, 79);
+            StrInput.Location = new Point(38, 49);
             StrInput.Name = "StrInput";
-            StrInput.Size = new Size(465, 29);
+            StrInput.Size = new Size(864, 29);
             StrInput.TabIndex = 2;
             // 
             // SubStrInput
             // 
             SubStrInput.Cursor = Cursors.IBeam;
             SubStrInput.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            SubStrInput.Location = new Point(38, 146);
+            SubStrInput.Location = new Point(38, 104);
             SubStrInput.Name = "SubStrInput";
-            SubStrInput.Size = new Size(465, 29);
+            SubStrInput.Size = new Size(659, 29);
             SubStrInput.TabIndex = 4;
             // 
             // textBox4
             // 
             textBox4.BorderStyle = BorderStyle.None;
             textBox4.Enabled = false;
-            textBox4.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(38, 117);
+            textBox4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox4.Location = new Point(38, 84);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
-            textBox4.Size = new Size(230, 23);
+            textBox4.Size = new Size(93, 22);
             textBox4.TabIndex = 3;
             textBox4.Text = "Подстрока:";
             // 
-            // button1
+            // FindSubStrBTN
             // 
-            button1.Location = new Point(38, 209);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 41);
-            button1.TabIndex = 5;
-            button1.Text = "Найти подстроки";
-            button1.UseVisualStyleBackColor = true;
+            FindSubStrBTN.Location = new Point(38, 170);
+            FindSubStrBTN.Name = "FindSubStrBTN";
+            FindSubStrBTN.Size = new Size(135, 41);
+            FindSubStrBTN.TabIndex = 5;
+            FindSubStrBTN.Text = "Найти подстроки";
+            FindSubStrBTN.UseVisualStyleBackColor = true;
             // 
             // Out
             // 
             Out.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Out.Location = new Point(64, 289);
+            Out.Location = new Point(38, 300);
             Out.Name = "Out";
-            Out.Size = new Size(818, 131);
+            Out.Size = new Size(864, 171);
             Out.TabIndex = 6;
             Out.Text = "";
             // 
-            // button2
+            // InsertSubStrBTN
             // 
-            button2.Location = new Point(212, 209);
-            button2.Name = "button2";
-            button2.Size = new Size(130, 22);
-            button2.TabIndex = 7;
-            button2.Text = "Вставка";
-            button2.UseVisualStyleBackColor = true;
+            InsertSubStrBTN.Location = new Point(38, 217);
+            InsertSubStrBTN.Name = "InsertSubStrBTN";
+            InsertSubStrBTN.Size = new Size(276, 35);
+            InsertSubStrBTN.TabIndex = 7;
+            InsertSubStrBTN.Text = "Вставка подстроки";
+            InsertSubStrBTN.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // DeleteSubStrBTN
             // 
-            button3.Location = new Point(212, 228);
-            button3.Name = "button3";
-            button3.Size = new Size(130, 22);
-            button3.TabIndex = 8;
-            button3.Text = "Удаление";
-            button3.UseVisualStyleBackColor = true;
+            DeleteSubStrBTN.Location = new Point(38, 249);
+            DeleteSubStrBTN.Name = "DeleteSubStrBTN";
+            DeleteSubStrBTN.Size = new Size(276, 36);
+            DeleteSubStrBTN.TabIndex = 8;
+            DeleteSubStrBTN.Text = "Удаление подстроки";
+            DeleteSubStrBTN.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // ReplaceSubStrBTN
             // 
-            button4.Location = new Point(373, 209);
-            button4.Name = "button4";
-            button4.Size = new Size(130, 41);
-            button4.TabIndex = 9;
-            button4.Text = "Заменить подстроку";
-            button4.UseVisualStyleBackColor = true;
+            ReplaceSubStrBTN.Location = new Point(179, 170);
+            ReplaceSubStrBTN.Name = "ReplaceSubStrBTN";
+            ReplaceSubStrBTN.Size = new Size(135, 41);
+            ReplaceSubStrBTN.TabIndex = 9;
+            ReplaceSubStrBTN.Text = "Заменить подстроку";
+            ReplaceSubStrBTN.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // TransformTypeBTN
             // 
-            comboBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Идентификатор", "Целое", "Вещественное", "Логическое" });
-            comboBox1.Location = new Point(528, 80);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(221, 28);
-            comboBox1.TabIndex = 10;
-            comboBox1.Text = "Выберите тип преобразования";
-            // 
-            // button5
-            // 
-            button5.Location = new Point(528, 117);
-            button5.Name = "button5";
-            button5.Size = new Size(130, 41);
-            button5.TabIndex = 11;
-            button5.Text = "Преобразовать";
-            button5.UseVisualStyleBackColor = true;
+            TransformTypeBTN.Location = new Point(636, 211);
+            TransformTypeBTN.Name = "TransformTypeBTN";
+            TransformTypeBTN.Size = new Size(266, 41);
+            TransformTypeBTN.TabIndex = 11;
+            TransformTypeBTN.Text = "Преобразовать";
+            TransformTypeBTN.UseVisualStyleBackColor = true;
             // 
             // TypeCheckBTN
             // 
-            TypeCheckBTN.Location = new Point(772, 80);
+            TypeCheckBTN.Location = new Point(350, 174);
             TypeCheckBTN.Name = "TypeCheckBTN";
-            TypeCheckBTN.Size = new Size(130, 41);
+            TypeCheckBTN.Size = new Size(255, 41);
             TypeCheckBTN.TabIndex = 12;
-            TypeCheckBTN.Text = "Определить тип";
+            TypeCheckBTN.Text = "Определить тип строки";
             TypeCheckBTN.UseVisualStyleBackColor = true;
             TypeCheckBTN.Click += CheckTypeBTN_Click;
+            // 
+            // textBox3
+            // 
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Enabled = false;
+            textBox3.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(76, 139);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(221, 28);
+            textBox3.TabIndex = 13;
+            textBox3.Text = "Работа со строками";
+            textBox3.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            textBox5.BorderStyle = BorderStyle.None;
+            textBox5.Enabled = false;
+            textBox5.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox5.Location = new Point(350, 139);
+            textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
+            textBox5.Size = new Size(255, 28);
+            textBox5.TabIndex = 14;
+            textBox5.Text = "Парсинг (разбор) строк";
+            textBox5.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            textBox6.BorderStyle = BorderStyle.None;
+            textBox6.Enabled = false;
+            textBox6.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox6.ImeMode = ImeMode.NoControl;
+            textBox6.Location = new Point(620, 139);
+            textBox6.Name = "textBox6";
+            textBox6.ReadOnly = true;
+            textBox6.ShortcutsEnabled = false;
+            textBox6.Size = new Size(282, 28);
+            textBox6.TabIndex = 15;
+            textBox6.Text = "Преобразование текста";
+            textBox6.TextAlign = HorizontalAlignment.Center;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Идентификатор", "Целое число", "Вещественное число", "Логическое значение" });
+            comboBox1.Location = new Point(636, 173);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(266, 29);
+            comboBox1.TabIndex = 16;
+            comboBox1.Text = "Выберите тип преобразования";
+            // 
+            // textBox7
+            // 
+            textBox7.Cursor = Cursors.IBeam;
+            textBox7.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox7.Location = new Point(703, 104);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(199, 29);
+            textBox7.TabIndex = 18;
+            // 
+            // textBox8
+            // 
+            textBox8.BorderStyle = BorderStyle.None;
+            textBox8.Enabled = false;
+            textBox8.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox8.Location = new Point(703, 84);
+            textBox8.Name = "textBox8";
+            textBox8.ReadOnly = true;
+            textBox8.Size = new Size(199, 22);
+            textBox8.TabIndex = 17;
+            textBox8.Text = "Количество вхождений:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(940, 483);
-            Controls.Add(TypeCheckBTN);
-            Controls.Add(button5);
+            Controls.Add(textBox7);
+            Controls.Add(textBox8);
             Controls.Add(comboBox1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(textBox6);
+            Controls.Add(textBox5);
+            Controls.Add(textBox3);
+            Controls.Add(TypeCheckBTN);
+            Controls.Add(TransformTypeBTN);
+            Controls.Add(ReplaceSubStrBTN);
+            Controls.Add(DeleteSubStrBTN);
+            Controls.Add(InsertSubStrBTN);
             Controls.Add(Out);
-            Controls.Add(button1);
+            Controls.Add(FindSubStrBTN);
             Controls.Add(SubStrInput);
             Controls.Add(textBox4);
             Controls.Add(StrInput);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Project \"Strings\"";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox textBox1;
         private TextBox textBox2;
         private TextBox StrInput;
         private TextBox SubStrInput;
         private TextBox textBox4;
-        private Button button1;
+        private Button FindSubStrBTN;
         private RichTextBox Out;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private ComboBox comboBox1;
-        private Button button5;
+        private Button InsertSubStrBTN;
+        private Button DeleteSubStrBTN;
+        private Button ReplaceSubStrBTN;
+        private Button TransformTypeBTN;
         private Button TypeCheckBTN;
+        private TextBox textBox3;
+        private TextBox textBox5;
+        private TextBox textBox6;
+        private TextBox textBox1;
+        private ComboBox comboBox1;
+        private TextBox textBox7;
+        private TextBox textBox8;
     }
 }
