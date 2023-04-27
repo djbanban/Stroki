@@ -187,49 +187,57 @@ namespace Stroki
             return result;
         }
         /// <summary>
-        /// вспомогательная фукция КМП для вычисления префикса функции
+        /// префикс-функция для подстроки
         /// </summary>
-        /// <param name="s">строка</param>
+        /// <param name="pattern">подстрока</param>
         /// <returns></returns>
-        public static int[] GetPrefix(string s)
+        public static int[] KMPPREFIX(string pattern)
         {
-            int[] result = new int[s.Length];
-            result[0] = 0;
-
-            for (int i = 1; i < s.Length; i++)
+            int m = pattern.Length; //длина подстроки
+            int[] pi = new int[m]; //массив pi, в нём будут содержаться длины наибольшего
+                                   //собственного префикса подстроки,которая будет также суффиксом подстроки
+            pi[0] = 0;
+            int k = 0;
+            for (int q = 1; q < m; q++) //с 1 так как pi[0] уже есть
             {
-                int k = result[i - 1];
-                while (s[k] != s[i] && k > 0)
-                    k = result[k - 1];
-                if (s[k] == s[i])
-                    result[i] = k + 1;
-                else
-                    result[i] = 0;
-
+                while (k > 0 && pattern[k] != pattern[q])//перебирает все возможные длины префиксов-суффиксов подстроки  
+                    k = pi[k - 1];
+                if (pattern[k] == pattern[q])
+                    k++;
+                pi[q] = k;
             }
-            return result;
+            return pi;
         }
         /// <summary>
-        /// эффективный алгоритм нахождения точек входа подстроки в строку
+        /// Программа,ищущая подстроки в строке (эффективный алгоритм)
         /// </summary>
-        /// <param name="pattern"></param>
         /// <param name="s">строка</param>
+        /// <param name="pattern">подстрока</param>
         /// <returns></returns>
-        public static string FindSubstring(string pattern, string s)
+        public static List<int> KMP(string s, string pattern)
         {
-            int[] pf = GetPrefix(pattern);
-            int index = 0;
-
-            for (int i = 0; i < s.Length; i++)
+            List<int> matches = new List<int>(); //список вхождений в подстроку
+            int n = s.Length;
+            int m = pattern.Length;
+            int[] pi = KMPPREFIX(pattern); //заполняем массив с помощью префикс-функции
+            int q = 0;
+            for (int i = 0; i < n; i++)
             {
-                while (index > 0 && pattern[index] != s[i])
-                    index = pf[index - 1];
-                if (pattern[index] == s[i])
-                    index++;
-                if (index == pattern.Length)
-                    return $"{i - index + 1}";
+                while (q > 0 && pattern[q] != s[i])
+                {
+                    q = pi[q - 1];
+                }
+                if (pattern[q] == s[i])
+                {
+                    q++;
+                }
+                if (q == m) //если q=длине подстроки,то добавляем точку вхождения
+                {
+                    matches.Add(i - m + 1); 
+                    q = pi[q - 1];
+                }
             }
-            return "";
+            return matches;
         }
         //ещё один велосипед, заменяет подстрочку в строке на новую, учитывая количество вхождений подстроки(указывается пользователем)
         /// <summary>

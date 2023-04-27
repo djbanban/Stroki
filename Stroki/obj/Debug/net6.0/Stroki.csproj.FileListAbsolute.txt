@@ -82,3 +82,15 @@ C:\Users\glebo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.dll
 C:\Users\glebo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\refint\Stroki.dll
 C:\Users\glebo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\Stroki.pdb
 C:\Users\glebo\Source\Repos\Stroki\Stroki\obj\Debug\net6.0\ref\Stroki.dll
+F:\stroki\Stroki\bin\Debug\net6.0\Stroki.deps.json
+F:\stroki\Stroki\bin\Debug\net6.0\Stroki.dll
+F:\stroki\Stroki\bin\Debug\net6.0\Stroki.pdb
+F:\stroki\Stroki\obj\Debug\net6.0\Stroki.csproj.AssemblyReference.cache
+F:\stroki\Stroki\obj\Debug\net6.0\Stroki.GeneratedMSBuildEditorConfig.editorconfig
+F:\stroki\Stroki\obj\Debug\net6.0\Stroki.AssemblyInfoInputs.cache
+F:\stroki\Stroki\obj\Debug\net6.0\Stroki.AssemblyInfo.cs
+F:\stroki\Stroki\obj\Debug\net6.0\Stroki.csproj.CoreCompileInputs.cache
+F:\stroki\Stroki\obj\Debug\net6.0\Stroki.dll
+F:\stroki\Stroki\obj\Debug\net6.0\refint\Stroki.dll
+F:\stroki\Stroki\obj\Debug\net6.0\Stroki.pdb
+F:\stroki\Stroki\obj\Debug\net6.0\ref\Stroki.dll
